@@ -1,140 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Help Desk UTM – Tickets</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Desk UTM - Tickets</title>
+    <link rel="stylesheet" href="./assets/img/style.css">
 </head>
-
 <body>
+    <div class="app-layout">
+        <header class="hero hero-small">
+            <div class="hero-content">
+                <span class="badge badge-info">Seguimiento</span>
+                <h1>Mis Tickets</h1>
+                <p>Consulta el estado de los incidentes registrados en el sistema Help Desk UTM.</p>
+            </div>
+        </header>
 
-    <header>
-        <h1>Help Desk UTM</h1>
-        <p>Sistema de Gestión de Incidentes – Universidad Técnica de Manabí</p>
-    </header>
+        <nav class="navbar" aria-label="Menú principal">
+            <ul class="nav-list">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="reportes.html">Reportar Incidente</a></li>
+                <li><a href="tickets.html" aria-current="page">Mis Tickets</a></li>
+            </ul>
+        </nav>
 
-    <nav aria-label="Menú principal">
-        <ul>
-            <li><a href="index.html">Dashboard</a></li>
-            <li><a href="reportes.html">Reportar Incidente</a></li>
-            <li><a href="tickets.html" aria-current="page">Mis Tickets</a></li>
-        </ul>
-    </nav>
+        <main class="container">
+            <section class="section">
+                <div class="section-header">
+                    <div>
+                        <h2>Tickets Registrados</h2>
+                        <p class="section-text">Listado completo de incidentes reportados en el sistema.</p>
+                    </div>
+                    <a class="btn btn-primary" href="reportes.html">+ Nuevo Ticket</a>
+                </div>
 
-    <main>
+                <article class="card">
+                    <h3 class="card-title">Lista de Tickets</h3>
+                    <div class="table-wrapper">
+                        <table class="table">
+                            <caption>Tickets de soporte técnico registrados en el sistema Help Desk UTM</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">N.° Ticket</th>
+                                    <th scope="col">Título</th>
+                                    <th scope="col">Solicitante</th>
+                                    <th scope="col">Categoría</th>
+                                    <th scope="col">Prioridad</th>
+                                    <th scope="col">Estado</th>
+                                    <th scope="col">Fecha</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#001</td>
+                                    <td>Fallo en la red del laboratorio de cómputo</td>
+                                    <td>Juan Pérez</td>
+                                    <td>Red</td>
+                                    <td><span class="badge badge-high">Alta</span></td>
+                                    <td><span class="badge badge-medium">En Progreso</span></td>
+                                    <td><time datetime="2025-10-01">01/10/2025</time></td>
+                                </tr>
+                                <tr>
+                                    <td>#002</td>
+                                    <td>Impresora sin papel en secretaría general</td>
+                                    <td>María López</td>
+                                    <td>Hardware</td>
+                                    <td><span class="badge badge-low">Baja</span></td>
+                                    <td><span class="badge badge-low">Cerrado</span></td>
+                                    <td><time datetime="2025-09-28">28/09/2025</time></td>
+                                </tr>
+                                <tr>
+                                    <td>#003</td>
+                                    <td>Error al instalar software académico MATLAB</td>
+                                    <td>Carlos Moreira</td>
+                                    <td>Software</td>
+                                    <td><span class="badge badge-medium">Media</span></td>
+                                    <td><span class="badge badge-info">Abierto</span></td>
+                                    <td><time datetime="2025-10-02">02/10/2025</time></td>
+                                </tr>
+                                <tr>
+                                    <td>#004</td>
+                                    <td>Equipo no enciende en aula 204</td>
+                                    <td>Andrea Zambrano</td>
+                                    <td>Hardware</td>
+                                    <td><span class="badge badge-high">Alta</span></td>
+                                    <td><span class="badge badge-info">Abierto</span></td>
+                                    <td><time datetime="2025-10-03">03/10/2025</time></td>
+                                </tr>
+                                <tr>
+                                    <td>#005</td>
+                                    <td>Acceso denegado al sistema de biblioteca</td>
+                                    <td>Pedro Cedeño</td>
+                                    <td>Software</td>
+                                    <td><span class="badge badge-medium">Media</span></td>
+                                    <td><span class="badge badge-low">Resuelto</span></td>
+                                    <td><time datetime="2025-09-30">30/09/2025</time></td>
+                                </tr>
+                                <tr>
+                                    <td>#006</td>
+                                    <td>Cable de red dañado en pasillo edificio B</td>
+                                    <td>Luisa Vera</td>
+                                    <td>Red</td>
+                                    <td><span class="badge badge-high">Alta</span></td>
+                                    <td><span class="badge badge-medium">En Progreso</span></td>
+                                    <td><time datetime="2025-10-04">04/10/2025</time></td>
+                                </tr>
+                                <tr>
+                                    <td>#007</td>
+                                    <td>Teclado con teclas dañadas, docente aula 112</td>
+                                    <td>Roberto Alcívar</td>
+                                    <td>Hardware</td>
+                                    <td><span class="badge badge-low">Baja</span></td>
+                                    <td><span class="badge badge-low">Cerrado</span></td>
+                                    <td><time datetime="2025-09-27">27/09/2025</time></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
 
-        <section>
-            <h2>Tickets Registrados</h2>
-            <p>Listado completo de incidentes reportados en el sistema.</p>
-            <p><a href="reportes.html">+ Nuevo Ticket</a></p>
+                <article class="card mt-3">
+                    <h3 class="card-title">Leyenda de Estados</h3>
+                    <div class="legend-grid">
+                        <p><span class="badge badge-info">Abierto</span> Pendiente de atención.</p>
+                        <p><span class="badge badge-medium">En Progreso</span> Siendo atendido por el equipo técnico.</p>
+                        <p><span class="badge badge-low">Resuelto</span> Solución aplicada, pendiente de verificación.</p>
+                        <p><span class="badge badge-low">Cerrado</span> Verificado y cerrado por el solicitante.</p>
+                    </div>
+                </article>
+            </section>
+        </main>
 
-            <article>
-                <h3>Lista de Tickets</h3>
-                <table>
-                    <caption>Tickets de soporte técnico registrados en el sistema Help Desk UTM</caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">N.° Ticket</th>
-                            <th scope="col">Título</th>
-                            <th scope="col">Solicitante</th>
-                            <th scope="col">Categoría</th>
-                            <th scope="col">Prioridad</th>
-                            <th scope="col">Estado</th>
-                            <th scope="col">Fecha</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>#001</td>
-                            <td>Fallo en la red del laboratorio de cómputo</td>
-                            <td>Juan Pérez</td>
-                            <td>Red</td>
-                            <td>Alta</td>
-                            <td>En Progreso</td>
-                            <td><time datetime="2025-10-01">01/10/2025</time></td>
-                        </tr>
-                        <tr>
-                            <td>#002</td>
-                            <td>Impresora sin papel en secretaría general</td>
-                            <td>María López</td>
-                            <td>Hardware</td>
-                            <td>Baja</td>
-                            <td>Cerrado</td>
-                            <td><time datetime="2025-09-28">28/09/2025</time></td>
-                        </tr>
-                        <tr>
-                            <td>#003</td>
-                            <td>Error al instalar software académico MATLAB</td>
-                            <td>Carlos Moreira</td>
-                            <td>Software</td>
-                            <td>Media</td>
-                            <td>Abierto</td>
-                            <td><time datetime="2025-10-02">02/10/2025</time></td>
-                        </tr>
-                        <tr>
-                            <td>#004</td>
-                            <td>Equipo no enciende en aula 204</td>
-                            <td>Andrea Zambrano</td>
-                            <td>Hardware</td>
-                            <td>Alta</td>
-                            <td>Abierto</td>
-                            <td><time datetime="2025-10-03">03/10/2025</time></td>
-                        </tr>
-                        <tr>
-                            <td>#005</td>
-                            <td>Acceso denegado al sistema de biblioteca</td>
-                            <td>Pedro Cedeño</td>
-                            <td>Software</td>
-                            <td>Media</td>
-                            <td>Resuelto</td>
-                            <td><time datetime="2025-09-30">30/09/2025</time></td>
-                        </tr>
-                        <tr>
-                            <td>#006</td>
-                            <td>Cable de red dañado en pasillo edificio B</td>
-                            <td>Luisa Vera</td>
-                            <td>Red</td>
-                            <td>Alta</td>
-                            <td>En Progreso</td>
-                            <td><time datetime="2025-10-04">04/10/2025</time></td>
-                        </tr>
-                        <tr>
-                            <td>#007</td>
-                            <td>Teclado con teclas dañadas, docente aula 112</td>
-                            <td>Roberto Alcívar</td>
-                            <td>Hardware</td>
-                            <td>Baja</td>
-                            <td>Cerrado</td>
-                            <td><time datetime="2025-09-27">27/09/2025</time></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </article>
-
-            <article>
-                <h3>Leyenda de Estados</h3>
-                <ul>
-                    <li><strong>Abierto:</strong> Pendiente de atención</li>
-                    <li><strong>En Progreso:</strong> Siendo atendido por el equipo técnico</li>
-                    <li><strong>Resuelto:</strong> Solución aplicada, pendiente de verificación</li>
-                    <li><strong>Cerrado:</strong> Verificado y cerrado por el solicitante</li>
-                </ul>
-            </article>
-
-        </section>
-
-    </main>
-
-    <footer>
-        <address>
-            <strong>Universidad Técnica de Manabí</strong> – Departamento de Tecnologías de la Información<br />
-            Av. Urbina y Che Guevara, Portoviejo, Manabí, Ecuador<br />
-            Contacto: <a href="mailto:helpdesk@utm.edu.ec">helpdesk@utm.edu.ec</a>
-        </address>
-        <p>&copy; 2025 UTM Help Desk – Todos los derechos reservados.</p>
-    </footer>
-
+        <footer class="footer">
+            <address>
+                <strong>Universidad Técnica de Manabí</strong> - Departamento de Tecnologías de la Información<br>
+                Av. Urbina y Che Guevara, Portoviejo, Manabí, Ecuador<br>
+                Contacto: <a href="mailto:helpdesk@utm.edu.ec">helpdesk@utm.edu.ec</a>
+            </address>
+            <p>&copy; 2025 UTM Help Desk - Todos los derechos reservados.</p>
+        </footer>
+    </div>
 </body>
-
 </html>

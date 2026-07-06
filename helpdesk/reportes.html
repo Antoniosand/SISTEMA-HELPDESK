@@ -1,108 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Help Desk UTM – Reportar Incidente</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Desk UTM - Reportar Incidente</title>
+    <link rel="stylesheet" href="./assets/img/style.css">
 </head>
-
 <body>
+    <div class="app-layout">
+        <header class="hero hero-small">
+            <div class="hero-content">
+                <span class="badge badge-info">Nuevo Reporte</span>
+                <h1>Reportar Incidente</h1>
+                <p>Registra un problema tecnológico para que el equipo de soporte pueda atenderlo.</p>
+            </div>
+        </header>
 
-    <header>
-        <h1>Help Desk UTM</h1>
-        <p>Sistema de Gestión de Incidentes – Universidad Técnica de Manabí</p>
-    </header>
+        <nav class="navbar" aria-label="Menú principal">
+            <ul class="nav-list">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="reportes.html" aria-current="page">Reportar Incidente</a></li>
+                <li><a href="tickets.html">Mis Tickets</a></li>
+            </ul>
+        </nav>
 
-    <nav aria-label="Menú principal">
-        <ul>
-            <li><a href="index.html">Dashboard</a></li>
-            <li><a href="reportes.html" aria-current="page">Reportar Incidente</a></li>
-            <li><a href="tickets.html">Mis Tickets</a></li>
-        </ul>
-    </nav>
+        <main class="container">
+            <section class="section">
+                <article class="card form-card-large">
+                    <h2 class="card-title">Reportar Nuevo Incidente</h2>
+                    <p class="card-text">Complete el formulario con los datos del incidente para registrarlo en el sistema.</p>
 
-    <main>
+                    <form action="#" method="post">
+                        <fieldset class="fieldset-card">
+                            <legend>Información del Solicitante</legend>
 
-        <section>
-            <h2>Reportar Nuevo Incidente</h2>
-            <p>Complete el formulario con los datos del incidente para registrarlo en el sistema.</p>
+                            <div class="form-layout">
+                                <div class="form-group">
+                                    <label class="form-label" for="nombre">Nombre completo:</label>
+                                    <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez López" required>
+                                </div>
 
-            <form action="#" method="post">
+                                <div class="form-group">
+                                    <label class="form-label" for="correo">Correo electrónico institucional:</label>
+                                    <input class="form-control" type="email" id="correo" name="correo" placeholder="usuario@utm.edu.ec" required>
+                                </div>
+                            </div>
+                        </fieldset>
 
-                <fieldset>
-                    <legend>Información del Solicitante</legend>
+                        <fieldset class="fieldset-card">
+                            <legend>Datos del Incidente</legend>
 
-                    <label for="nombre">Nombre completo:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez López" required />
+                            <div class="form-layout">
+                                <div class="form-group">
+                                    <label class="form-label" for="titulo">Título del incidente:</label>
+                                    <input class="form-control" type="text" id="titulo" name="titulo" placeholder="Ej. La impresora no funciona" maxlength="120" required>
+                                </div>
 
-                    <br />
+                                <div class="form-group">
+                                    <label class="form-label" for="categoria">Categoría:</label>
+                                    <select class="form-control" id="categoria" name="categoria" required>
+                                        <option value="">Seleccione una categoría</option>
+                                        <option value="red">Red</option>
+                                        <option value="hardware">Hardware</option>
+                                        <option value="software">Software</option>
+                                    </select>
+                                </div>
+                            </div>
 
-                    <label for="correo">Correo electrónico institucional:</label>
-                    <input type="text" id="correo" name="correo" placeholder="usuario@utm.edu.ec" required />
-                </fieldset>
+                            <div class="form-group">
+                                <span class="form-label">Nivel de prioridad:</span>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="prioridad" value="alta" required> Alta</label>
+                                    <label><input type="radio" name="prioridad" value="media"> Media</label>
+                                    <label><input type="radio" name="prioridad" value="baja"> Baja</label>
+                                </div>
+                            </div>
 
-                <fieldset>
-                    <legend>Datos del Incidente</legend>
+                            <div class="form-group">
+                                <label class="form-label" for="descripcion">Descripción detallada:</label>
+                                <textarea class="form-control" id="descripcion" name="descripcion" rows="6" placeholder="Describa el problema con el mayor detalle posible..." required></textarea>
+                            </div>
 
-                    <label for="titulo">Título del incidente:</label>
-                    <input type="text" id="titulo" name="titulo" placeholder="Ej. La impresora no funciona"
-                        maxlength="120" required />
+                            <div class="form-group">
+                                <label class="form-label" for="ubicacion">Ubicación / Equipo:</label>
+                                <input class="form-control" type="text" id="ubicacion" name="ubicacion" placeholder="Ej. Laboratorio 3, Aula 204">
+                            </div>
+                        </fieldset>
 
-                    <br />
+                        <div class="form-actions">
+                            <button class="btn btn-primary" type="submit">Enviar Reporte</button>
+                            <button class="btn btn-secondary" type="reset">Limpiar Formulario</button>
+                        </div>
+                    </form>
+                </article>
+            </section>
+        </main>
 
-                    <label for="categoria">Categoría:</label>
-                    <select id="categoria" name="categoria" required>
-                        <option value="">-- Seleccione una categoría --</option>
-                        <option value="red">Red</option>
-                        <option value="hardware">Hardware</option>
-                        <option value="software">Software</option>
-                    </select>
-
-                    <br />
-
-                    <fieldset>
-                        <legend>Nivel de prioridad:</legend>
-                        <label>
-                            <input type="radio" name="prioridad" value="alta" required /> Alta
-                        </label>
-                        <label>
-                            <input type="radio" name="prioridad" value="media" /> Media
-                        </label>
-                        <label>
-                            <input type="radio" name="prioridad" value="baja" /> Baja
-                        </label>
-                    </fieldset>
-
-                    <br />
-
-                    <label for="descripcion">Descripción detallada:</label>
-                    <textarea id="descripcion" name="descripcion" rows="6" cols="50"
-                        placeholder="Describa el problema con el mayor detalle posible..." required></textarea>
-
-                    <br />
-
-                    <label for="ubicacion">Ubicación / Equipo:</label>
-                    <input type="text" id="ubicacion" name="ubicacion" placeholder="Ej. Laboratorio 3, Aula 204" />
-                </fieldset>
-
-                <button type="submit">Enviar Reporte</button>
-                <button type="reset">Limpiar Formulario</button>
-
-            </form>
-        </section>
-
-    </main>
-
-    <footer>
-        <address>
-            <strong>Universidad Técnica de Manabí</strong> – Departamento de Tecnologías de la Información<br />
-            Av. Urbina y Che Guevara, Portoviejo, Manabí, Ecuador<br />
-            Contacto: <a href="mailto:helpdesk@utm.edu.ec">helpdesk@utm.edu.ec</a>
-        </address>
-        <p>&copy; 2025 UTM Help Desk – Todos los derechos reservados.</p>
-    </footer>
-
+        <footer class="footer">
+            <address>
+                <strong>Universidad Técnica de Manabí</strong> - Departamento de Tecnologías de la Información<br>
+                Av. Urbina y Che Guevara, Portoviejo, Manabí, Ecuador<br>
+                Contacto: <a href="mailto:helpdesk@utm.edu.ec">helpdesk@utm.edu.ec</a>
+            </address>
+            <p>&copy; 2025 UTM Help Desk - Todos los derechos reservados.</p>
+        </footer>
+    </div>
 </body>
-
 </html>
